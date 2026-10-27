@@ -15,7 +15,8 @@ const MIME_TYPES = {
   '.pdf': 'application/pdf',
   '.ico': 'image/x-icon',
   '.txt': 'text/plain; charset=UTF-8',
-  '.xml': 'application/xml; charset=UTF-8'
+  '.xml': 'application/xml; charset=UTF-8',
+  '.woff2': 'font/woff2'
 };
 
 const server = http.createServer((req, res) => {
