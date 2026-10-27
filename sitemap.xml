@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://michaelfateye.pages.dev/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://michaelfateye.pages.dev/assets/executive_portrait.png</image:loc>
+      <image:title>Fateye Michael Adediran - Head Underwriter and Senior Risk Executive</image:title>
+      <image:caption>Fateye Michael Adediran - Chartered Insurer (ACIIN), MBA (Risk Management)</image:caption>
+    </image:image>
+  </url>
+</urlset>

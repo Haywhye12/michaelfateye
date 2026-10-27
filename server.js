@@ -13,7 +13,9 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.pdf': 'application/pdf',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.txt': 'text/plain; charset=UTF-8',
+  '.xml': 'application/xml; charset=UTF-8'
 };
 
 const server = http.createServer((req, res) => {
