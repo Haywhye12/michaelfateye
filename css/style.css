@@ -3,8 +3,6 @@
    Theme: Modern Classic Executive (Navy, Ivory, Champagne Gold)
    =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 /* --- Root Color Tokens --- */
 :root {
   /* Midnight Sapphire & Obsidian (Dark Luxury Theme - Default) */
@@ -37,7 +35,7 @@
   --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-accent: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   --radius-sm: 6px;
   --radius-md: 12px;
