@@ -1,5 +1,5 @@
 /**
- * FATEYE MICHEAL ADEDIRAN - EXECUTIVE PORTFOLIO INTERACTION ENGINE
+ * FATEYE MICHAEL ADEDIRAN - EXECUTIVE PORTFOLIO INTERACTION ENGINE
  * Theme: Modern Classic Luxury
  */
 
@@ -344,7 +344,7 @@ function initContactForm() {
       setTimeout(() => {
         window.location.href = mailtoUrl;
         form.reset();
-        showStatus('Inquiry dispatched! Fateye Micheal Adediran will review your request promptly.', 'success');
+        showStatus('Inquiry dispatched! Fateye Michael Adediran will review your request promptly.', 'success');
       }, 700);
     });
   }
@@ -352,7 +352,7 @@ function initContactForm() {
   if (whatsappQuickBtn) {
     whatsappQuickBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const waText = encodeURIComponent('Hello Mr. Fateye Micheal Adediran, I am reaching out through your executive website regarding underwriting advisory / risk consultation.');
+      const waText = encodeURIComponent('Hello Mr. Fateye Michael Adediran, I am reaching out through your executive website regarding underwriting advisory / risk consultation.');
       window.open(`https://wa.me/2348038240492?text=${waText}`, '_blank');
     });
   }
