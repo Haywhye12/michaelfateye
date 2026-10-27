@@ -192,6 +192,7 @@ button, input, select, textarea {
 .gold-text {
   background: var(--gold-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -709,6 +710,7 @@ button, input, select, textarea {
   line-height: 1.1;
   background: var(--gold-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
