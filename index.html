@@ -968,22 +968,28 @@
               Dispatch an Executive Advisory Inquiry
             </h3>
 
-            <form id="consultationForm">
+            <form id="consultationForm" action="https://formsubmit.co/madediran4002@gmail.com" method="POST">
+              <!-- FormSubmit Direct Dispatch Settings -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Executive Advisory Inquiry — Fateye Michael Adediran Portfolio">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" style="display:none">
+
               <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label" for="formName">Full Name / Designation *</label>
-                  <input type="text" id="formName" class="form-input" placeholder="e.g. Managing Director / Partner" required>
+                  <input type="text" id="formName" name="Full Name / Designation" class="form-input" placeholder="e.g. Managing Director / Partner" required>
                 </div>
 
                 <div class="form-group">
                   <label class="form-label" for="formEmail">Corporate Email *</label>
-                  <input type="email" id="formEmail" class="form-input" placeholder="name@corporation.com" required>
+                  <input type="email" id="formEmail" name="Corporate Email" class="form-input" placeholder="name@corporation.com" required>
                 </div>
               </div>
 
               <div class="form-group" style="margin-top: 1.2rem;">
                 <label class="form-label" for="formService">Engagement Nature</label>
-                <select id="formService" class="form-select">
+                <select id="formService" name="Engagement Nature" class="form-select">
                   <option value="Underwriting Portfolio Assessment">Underwriting Portfolio Audit & Risk Assessment</option>
                   <option value="Pre/Post Loss Survey Advisory">Pre-Loss / Post-Loss Engineering Survey Advisory</option>
                   <option value="Corporate Board Consultation">Board Risk Governance & Executive Consultation</option>
@@ -994,12 +1000,12 @@
 
               <div class="form-group" style="margin-top: 1.2rem;">
                 <label class="form-label" for="formMessage">Brief Context of Inquiry *</label>
-                <textarea id="formMessage" class="form-input form-textarea" placeholder="Detail the risk parameters, enterprise context, or advisory requirements..." required></textarea>
+                <textarea id="formMessage" name="Brief Context of Inquiry" class="form-input form-textarea" placeholder="Detail the risk parameters, enterprise context, or advisory requirements..." required></textarea>
               </div>
 
               <div id="formStatusMsg" style="display: none;"></div>
 
-              <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1.5rem;">
+              <button type="submit" id="submitInquiryBtn" class="btn btn-gold" style="width: 100%; margin-top: 1.5rem;">
                 <span>Transmit Formal Inquiry</span>
                 <span class="btn-icon">📨</span>
               </button>

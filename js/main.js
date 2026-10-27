@@ -318,10 +318,11 @@ function initResumeModal() {
 function initContactForm() {
   const form = document.getElementById('consultationForm');
   const statusMsg = document.getElementById('formStatusMsg');
+  const submitBtn = document.getElementById('submitInquiryBtn') || (form ? form.querySelector('button[type="submit"]') : null);
   const whatsappQuickBtn = document.getElementById('whatsappQuickBtn');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const name = document.getElementById('formName').value.trim();
@@ -334,18 +335,51 @@ function initContactForm() {
         return;
       }
 
-      // Simulate executive dispatch with mailto fallback
-      const subject = encodeURIComponent(`Consultation Inquiry: ${service} - from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInquiry Type: ${service}\n\nMessage:\n${message}`);
-      const mailtoUrl = `mailto:madediran4002@gmail.com?subject=${subject}&body=${body}`;
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Transmitting Inquiry...</span> <span class="btn-icon">⏳</span>';
+      }
 
-      showStatus('Preparing your executive consultation dispatch...', 'success');
+      showStatus('Dispatching your advisory inquiry to madediran4002@gmail.com...', 'info');
 
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/madediran4002@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            'Full Name / Designation': name,
+            'Corporate Email': email,
+            'Engagement Nature': service,
+            'Inquiry Details': message,
+            '_subject': `Executive Advisory Inquiry: ${service} (from ${name})`
+          })
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok || result.success === 'true' || result.message) {
+          form.reset();
+          showStatus('Inquiry dispatched successfully! Your message has been delivered to madediran4002@gmail.com. Fateye Michael Adediran will review your request promptly.', 'success');
+        } else {
+          throw new Error('API dispatch failed');
+        }
+      } catch (err) {
+        // Fallback to mailto client directly addressing madediran4002@gmail.com
+        const subject = encodeURIComponent(`Consultation Inquiry: ${service} - from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInquiry Type: ${service}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:madediran4002@gmail.com?subject=${subject}&body=${body}`;
         form.reset();
-        showStatus('Inquiry dispatched! Fateye Michael Adediran will review your request promptly.', 'success');
-      }, 700);
+        showStatus('Inquiry prepared in your email client for madediran4002@gmail.com.', 'success');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      }
     });
   }
 
@@ -371,6 +405,10 @@ function initContactForm() {
       statusMsg.style.background = 'rgba(16, 185, 129, 0.15)';
       statusMsg.style.color = '#10b981';
       statusMsg.style.border = '1px solid #10b981';
+    } else if (type === 'info') {
+      statusMsg.style.background = 'rgba(212, 175, 55, 0.15)';
+      statusMsg.style.color = '#d4af37';
+      statusMsg.style.border = '1px solid #d4af37';
     } else {
       statusMsg.style.background = 'rgba(239, 68, 68, 0.15)';
       statusMsg.style.color = '#ef4444';
