@@ -1744,6 +1744,7 @@ button, input, select, textarea {
   overflow: hidden;
   box-shadow: var(--shadow-lg), var(--gold-glow);
   animation: modalEnter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex: 1 1 auto;
 }
 
 @keyframes modalEnter {
@@ -1780,22 +1781,28 @@ button, input, select, textarea {
 }
 
 .modal-content-scroll {
-  padding: 2.5rem;
+  padding: 2rem 2.5rem;
   overflow-y: auto;
   line-height: 1.7;
+  flex: 1;
 }
 
 .modal-cv-header {
   text-align: left;
-  border-bottom: 2px solid var(--gold-primary);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-gold);
+  padding: 1.5rem 2.5rem;
+  margin: -2rem -2.5rem 2rem -2.5rem;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(22,36,61,0.5) 100%);
 }
 
 .modal-cv-header h2 {
   font-family: var(--font-serif);
   font-size: 1.85rem;
   color: var(--text-primary);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .modal-cv-header p {
@@ -2686,18 +2693,6 @@ button, input, select, textarea {
 .cv-training-row:hover {
   border-color: var(--border-gold);
   color: var(--text-primary);
-}
-
-/* ── Modal CV Header Upgrade ─────────────────────────────────────── */
-/* (Base styles handled above; this adds the gradient background) */
-.modal-cv-header {
-  padding: 1.75rem 2rem;
-  background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(22,36,61,0.5) 100%);
-  border-bottom: 1px solid var(--border-gold);
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-sm);
-  margin: -2.5rem -2.5rem 2rem -2.5rem;
-  text-align: left;
 }
 
 /* ── Responsive tweaks ───────────────────────────────────────────── */
