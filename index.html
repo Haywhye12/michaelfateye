@@ -169,7 +169,7 @@
   <link rel="preload" href="assets/fonts/plusjakartasans-latin.woff2" as="font" type="font/woff2" crossorigin>
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=2.3.0">
+  <link rel="stylesheet" href="css/style.css?v=2.4.0">
 </head>
 <body>
 
@@ -1233,6 +1233,229 @@
   </div>
 
   <!-- =================================================================
+       LEGAL, PRIVACY, TERMS & COOKIES MODAL
+       ================================================================= -->
+  <div class="modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal-container" style="max-width: 880px;">
+      <div class="modal-header">
+        <h3 id="legalModalTitle">Governance, Privacy &amp; Legal Terms</h3>
+        <button class="modal-close-btn" id="closeLegalModalBtn" aria-label="Close Legal Modal">&times;</button>
+      </div>
+
+      <!-- Legal Navigation Tabs -->
+      <div class="legal-tabs-bar">
+        <button type="button" class="legal-tab-btn active" data-target="legalPrivacy">
+          <span>🛡️ Privacy Policy</span>
+        </button>
+        <button type="button" class="legal-tab-btn" data-target="legalTerms">
+          <span>📜 Terms &amp; Conditions</span>
+        </button>
+        <button type="button" class="legal-tab-btn" data-target="legalCookies">
+          <span>🍪 Cookie Policy</span>
+        </button>
+      </div>
+
+      <div class="modal-content-scroll" style="padding-top: 1.8rem;">
+        
+        <!-- ── TAB 1: PRIVACY POLICY ────────────────────────────── -->
+        <div class="legal-tab-panel active" id="legalPrivacy">
+          <div class="legal-doc-header">
+            <h4>Executive Privacy Policy &amp; Data Protection Statement</h4>
+            <div class="legal-doc-date">Compliance Standard: NDPA 2023 / NDPR &amp; Global Data Principles &nbsp;|&nbsp; Last Revised: November 2026</div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>1.0</span> Principle of Confidentiality &amp; Purpose</div>
+            <div class="legal-clause-body">
+              <p>
+                As an executive risk management and underwriting leader, Fateye Michael Adediran is committed to uncompromising professional integrity and data protection. This Privacy Policy governs the collection, processing, and safeguarding of information received through this executive website (<a href="https://michaelfateye.org/" style="color: var(--gold-primary);">michaelfateye.org</a>).
+              </p>
+              <p>
+                We adhere strictly to the Nigeria Data Protection Act (NDPA 2023), the Nigeria Data Protection Regulation (NDPR), and benchmark international frameworks such as the General Data Protection Regulation (GDPR) to ensure all personal data is handled lawfully, transparently, and with strict confidentiality.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>2.0</span> Information We Receive &amp; Collect</div>
+            <div class="legal-clause-body">
+              <p>We only collect information that is strictly necessary to evaluate and respond to professional inquiries:</p>
+              <ul class="legal-list">
+                <li><strong>Direct Inquiries:</strong> When submitting an Advisory Consultation inquiry, you voluntarily furnish your Full Name, Corporate Email Address, Nature of Engagement, and Inquiry Context.</li>
+                <li><strong>Direct Correspondence:</strong> Any communication transmitted directly via email (<a href="mailto:madediran4002@gmail.com" style="color: var(--gold-primary);">madediran4002@gmail.com</a>), telephone (+234 803 824 0492), or instant messaging (WhatsApp).</li>
+                <li><strong>Edge Technical Data:</strong> Automated server transmission tokens, IP address, device telemetry, and referral data gathered through Cloudflare edge proxy networks strictly for firewall defenses, bot abatement, and rapid global CDN delivery.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>3.0</span> Purpose &amp; Lawful Basis of Processing</div>
+            <div class="legal-clause-body">
+              <p>Your information is processed under the lawful basis of consent and legitimate professional interest for the following purposes:</p>
+              <ul class="legal-list">
+                <li>Evaluating underwriting portfolio audit inquiries and engineering pre/post-loss survey advisory briefs.</li>
+                <li>Facilitating executive board consultations, syndicate co-insurance appraisals, and academic keynote engagements.</li>
+                <li>Transmitting official credentials, transcripts, and referee dossiers upon authorized request.</li>
+              </ul>
+              <div class="legal-callout-box">
+                <strong style="color: var(--gold-light);">Zero Commercial Dissemination:</strong> Personal contact information is never traded, monetized, leased, or disclosed to third-party commercial marketing or lead-generation syndicates.
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>4.0</span> Security &amp; Data Retention</div>
+            <div class="legal-clause-body">
+              <p>
+                All data transmission between your browser and this portal is secured through high-grade Transport Layer Security (TLS 1.3 / SSL encryption). Correspondence records are preserved only for the duration required to complete active professional engagement or comply with statutory recordkeeping regulations.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>5.0</span> Data Subject Rights</div>
+            <div class="legal-clause-body">
+              <p>
+                You retain complete statutory rights to request confirmation of information held, demand rectification of inaccurate details, or request the permanent deletion of your correspondence history. To exercise these rights, direct an authorized communication to:
+              </p>
+              <p style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-light);">
+                Email: madediran4002@gmail.com &nbsp;|&nbsp; Attention: Executive Data Controller
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TAB 2: TERMS & CONDITIONS ────────────────────────── -->
+        <div class="legal-tab-panel" id="legalTerms">
+          <div class="legal-doc-header">
+            <h4>Terms of Use &amp; Professional Engagement Disclaimer</h4>
+            <div class="legal-doc-date">Official Governance &nbsp;|&nbsp; Effective Date: November 2026</div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>1.0</span> Nature of This Portal</div>
+            <div class="legal-clause-body">
+              <p>
+                This digital asset (<a href="https://michaelfateye.org/" style="color: var(--gold-primary);">michaelfateye.org</a>) is the official executive dossier and professional curriculum vitae of Fateye Michael Adediran (ACIIN, MBA, Ph.D. Candidate), Head of Underwriting at Prestige Assurance PLC. It is provided for informational, executive appraisal, and professional advisory consultation purposes.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>2.0</span> Underwriting &amp; MPL Simulator Disclaimer</div>
+            <div class="legal-clause-body">
+              <div class="legal-callout-box">
+                <strong style="color: var(--gold-light); display: block; margin-bottom: 0.35rem;">⚠️ Important Actuarial Disclaimer</strong>
+                The interactive Underwriting &amp; Maximum Probable Loss (MPL) Simulator is designed solely as an illustrative domain model to demonstrate technical underwriting frameworks, risk mitigation grading, and co-insurance retention syndication.
+              </div>
+              <ul class="legal-list">
+                <li>Outputs, values, and recommendations generated by the simulator do <strong>not</strong> constitute a formal insurance quotation, binding binder of insurance, cover note, or legal contract.</li>
+                <li>All commercial insurance underwriting, rating, and binding authority are strictly governed by statutory policy documentation, physical engineering risk surveys, and official underwriting acceptance under Prestige Assurance PLC and NAICOM regulatory guidelines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>3.0</span> Intellectual Property &amp; Copyright</div>
+            <div class="legal-clause-body">
+              <p>
+                All elements of this portal—including but not limited to the executive monogram crest (FMA), portraits, original career milestones, textual narratives, domain calculators, and published CV documents—are the exclusive intellectual property of Fateye Michael Adediran.
+              </p>
+              <p>
+                Unauthorized scraping, reproduction, plagiarism, or automated commercial redistribution without prior written consent is strictly prohibited and subject to legal recourse under Nigerian and international copyright treaties.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>4.0</span> Professional Advisory Consultations</div>
+            <div class="legal-clause-body">
+              <p>
+                Inquiries dispatched through the advisory form do not automatically create an advisory agreement, broker mandate, or fiduciary relationship until formal institutional terms of reference and non-disclosure agreements are mutually executed.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>5.0</span> Governing Jurisdiction</div>
+            <div class="legal-clause-body">
+              <p>
+                These terms and any dispute arising from the use of this website shall be governed by, and construed in accordance with, the laws of the Federal Republic of Nigeria.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TAB 3: COOKIE POLICY ─────────────────────────────── -->
+        <div class="legal-tab-panel" id="legalCookies">
+          <div class="legal-doc-header">
+            <h4>Cookie &amp; Local Storage Governance</h4>
+            <div class="legal-doc-date">Transparency &amp; Preference Control &nbsp;|&nbsp; November 2026</div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>1.0</span> What Are Cookies and Local Storage?</div>
+            <div class="legal-clause-body">
+              <p>
+                Cookies and browser local storage are compact data elements retained on your device when accessing web applications. They allow digital platforms to remember your presentation preferences, authenticate session states, and provide secure communication without requiring repetitive configuration.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>2.0</span> How This Portal Utilizes Storage</div>
+            <div class="legal-clause-body">
+              <p>We utilize an austere, minimal storage footprint focused strictly on user experience and system integrity:</p>
+              
+              <ul class="legal-list">
+                <li>
+                  <strong>Visual Presentation Preference (Essential):</strong><br>
+                  Key: <code style="font-family: var(--font-mono); color: var(--gold-light);">executive_theme</code><br>
+                  Purpose: Preserves your choice between Midnight Luxury (default dark mode) and Classical Ivory (light mode) across subsequent page visits.
+                </li>
+                <li>
+                  <strong>Cookie Consent Acknowledgment (Essential):</strong><br>
+                  Key: <code style="font-family: var(--font-mono); color: var(--gold-light);">fma_cookie_consent</code><br>
+                  Purpose: Memorizes that you have acknowledged the portal's governance policies so the consent banner is not displayed repetitively.
+                </li>
+                <li>
+                  <strong>Edge Security &amp; DDoS Mitigation (Cloudflare):</strong><br>
+                  Tokens: Cloudflare network edge verification tokens.<br>
+                  Purpose: Distinguishes legitimate human executives and corporate search committees from automated malicious bot traffic, ensuring continuous uptime and sub-second delivery.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>3.0</span> Third-Party Links &amp; External Integrations</div>
+            <div class="legal-clause-body">
+              <p>
+                Our portal includes direct links to external platforms such as WhatsApp (<code style="font-family: var(--font-mono);">wa.me</code>), Instagram, Facebook, and form routing gateways. When engaging external services, those platforms operate under their respective independent privacy and cookie policies.
+              </p>
+            </div>
+          </div>
+
+          <div class="legal-clause">
+            <div class="legal-clause-title"><span>4.0</span> Managing Your Preferences</div>
+            <div class="legal-clause-body">
+              <p>
+                You maintain complete agency over cookies and local storage. You may clear your browser storage or configure your browser to reject cookies at any time via your browser settings (Chrome, Safari, Edge, Firefox). Doing so will simply reset your theme to default Midnight Luxury on your next visit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer" style="justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Direct Governance Contact: madediran4002@gmail.com</span>
+        <button type="button" class="btn btn-outline-gold btn-sm" id="dismissLegalModalBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
        FOOTER
        ================================================================= -->
   <footer class="footer">
@@ -1286,18 +1509,60 @@
             <li><a href="#contact">Schedule Advisory</a></li>
           </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Legal &amp; Governance</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy" class="open-legal-modal-btn" data-legal-tab="privacy">Privacy Policy</a></li>
+            <li><a href="#terms" class="open-legal-modal-btn" data-legal-tab="terms">Terms of Engagement</a></li>
+            <li><a href="#cookies" class="open-legal-modal-btn" data-legal-tab="cookies">Cookie Policy</a></li>
+            <li><a href="#cookies" class="open-legal-modal-btn" data-legal-tab="cookies">Cookie Preferences</a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="footer-bottom">
         <div>
           &copy; 2026 Fateye Michael Adediran. All rights reserved.
         </div>
+        <div class="footer-legal-links">
+          <a href="#privacy" class="open-legal-modal-btn" data-legal-tab="privacy">Privacy Policy</a>
+          <span class="footer-legal-sep">•</span>
+          <a href="#terms" class="open-legal-modal-btn" data-legal-tab="terms">Terms &amp; Conditions</a>
+          <span class="footer-legal-sep">•</span>
+          <a href="#cookies" class="open-legal-modal-btn" data-legal-tab="cookies">Cookie Policy</a>
+        </div>
         <div>
-          Designed for Executive Distinction & Actuarial Rigor • Modern Classic Portfolio
+          Designed for Executive Distinction &amp; Actuarial Rigor • Modern Classic Portfolio
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- =================================================================
+       COOKIE CONSENT NOTIFICATION
+       ================================================================= -->
+  <aside class="cookie-banner" id="cookieConsentBanner" aria-label="Cookie consent banner" style="display: none;">
+    <div class="cookie-banner-content">
+      <div class="cookie-banner-text">
+        <span class="cookie-icon">🍪</span>
+        <div>
+          <strong style="color: var(--text-primary); font-family: var(--font-serif); font-size: 0.92rem; display: block;">Executive Governance &amp; Cookie Notice</strong>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); margin-top: 0.2rem; line-height: 1.5;">
+            This executive dossier uses essential storage to remember your visual presentation mode and maintain secure edge delivery. Review our <a href="#privacy" class="open-legal-modal-btn" data-legal-tab="privacy" style="color: var(--gold-primary); text-decoration: underline;">Privacy Policy</a>, <a href="#terms" class="open-legal-modal-btn" data-legal-tab="terms" style="color: var(--gold-primary); text-decoration: underline;">Terms</a>, and <a href="#cookies" class="open-legal-modal-btn" data-legal-tab="cookies" style="color: var(--gold-primary); text-decoration: underline;">Cookie Policy</a>.
+          </p>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-outline-gold btn-sm open-legal-modal-btn" data-legal-tab="cookies">
+          <span>Preferences</span>
+        </button>
+        <button type="button" class="btn btn-gold btn-sm" id="acceptCookiesBtn">
+          <span>Accept &amp; Continue</span>
+        </button>
+      </div>
+    </div>
+  </aside>
 
   <!-- Back to top button -->
   <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Scroll to top">
@@ -1305,6 +1570,6 @@
   </button>
 
   <!-- Interaction Scripts -->
-  <script src="js/main.js?v=2.3.0"></script>
+  <script src="js/main.js?v=2.4.0"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelineFilter();
   initRiskCalculator();
   initResumeModal();
+  initLegalModal();
+  initCookieBanner();
   initContactForm();
   initBackToTop();
   initScrollProgress();
@@ -507,4 +509,102 @@ function initScrollReveals() {
   });
 
   revealElements.forEach(el => observer.observe(el));
+}
+
+
+/* ===================================================================
+   12. LEGAL, PRIVACY, TERMS & COOKIES MODAL
+   =================================================================== */
+function initLegalModal() {
+  const modal = document.getElementById('legalModal');
+  const openBtns = document.querySelectorAll('.open-legal-modal-btn');
+  const closeBtn = document.getElementById('closeLegalModalBtn');
+  const dismissBtn = document.getElementById('dismissLegalModalBtn');
+  const tabBtns = document.querySelectorAll('.legal-tab-btn');
+  const tabPanels = document.querySelectorAll('.legal-tab-panel');
+
+  if (!modal) return;
+
+  function switchTab(tabKey) {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+
+    const targetBtn = Array.from(tabBtns).find(b => b.getAttribute('data-target') === tabKey);
+    const targetPanel = document.getElementById(tabKey);
+
+    if (targetBtn && targetPanel) {
+      targetBtn.classList.add('active');
+      targetPanel.classList.add('active');
+    }
+  }
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      switchTab(target);
+    });
+  });
+
+  function openModal(defaultTab) {
+    if (defaultTab) {
+      const map = {
+        'privacy': 'legalPrivacy',
+        'terms': 'legalTerms',
+        'cookies': 'legalCookies'
+      };
+      switchTab(map[defaultTab] || defaultTab);
+    }
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = btn.getAttribute('data-legal-tab') || 'privacy';
+      openModal(tab);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+}
+
+/* ===================================================================
+   13. COOKIE CONSENT BANNER
+   =================================================================== */
+function initCookieBanner() {
+  const banner = document.getElementById('cookieConsentBanner');
+  const acceptBtn = document.getElementById('acceptCookiesBtn');
+  if (!banner || !acceptBtn) return;
+
+  const consented = localStorage.getItem('fma_cookie_consent');
+  if (!consented) {
+    setTimeout(() => {
+      banner.style.display = 'block';
+    }, 1200);
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('fma_cookie_consent', 'accepted');
+    banner.style.animation = 'cookieSlideUp 0.3s reverse forwards';
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 300);
+  });
 }
